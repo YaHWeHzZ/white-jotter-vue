@@ -1,5 +1,18 @@
 <template>
   <div class="hello">
+    <div class="info-type-one">
+      <!-- 内容区域 -->
+      <div class="">
+        测试内容！
+      </div>
+      <!-- 显示提示区域   内容 -->
+      <div class="info-panel-content">
+        <!-- 显示提示框区域  三角区域 -->
+        <div class="info-panel-triple"></div>
+        你好！
+      </div>
+    </div>
+
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -53,6 +66,7 @@
         </a>
       </li>
     </ul>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -66,6 +80,8 @@ export default {
   },
   mounted() {
     console.log('in helloword')
+  },
+  methods: {
   }
 }
 </script>
@@ -86,5 +102,37 @@ li {
 }
 a {
   color: #42b983;
+}
+.info-type-one {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #eee;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+}
+.info-panel-triple {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: hsla(0, 0%, 6%, 0.6);
+  position: absolute;
+  left: 16px;
+  top: -16px;
+}
+.info-panel-content {
+  display: inline-block;
+  position: relative;
+  margin-top: 15px;
+  height: 30px;
+  line-height: 30px;
+  background-color: hsla(0, 0%, 6%, 0.6);
+  color: #fff;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 12px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 </style>

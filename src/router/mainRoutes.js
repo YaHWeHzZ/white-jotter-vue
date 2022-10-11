@@ -10,7 +10,12 @@ export const mainRoutes = [
         path: 'home',
         name: 'home',
         component: home
-
+      },
+      {
+        path: 'home2',
+        name: 'home2',
+        component: () =>
+          import('@/components/home2/index')
       }
     ]
   },
@@ -19,6 +24,12 @@ export const mainRoutes = [
     name: 'home',
     component: () =>
       import('@/components/home/index')
+  },
+  {
+    path: '/home2',
+    name: 'home2',
+    component: () =>
+      import('@/components/home2/index')
   },
   {
     path: '/Login',

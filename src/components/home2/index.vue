@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    Hello World!
+    Hello World2!
     <!-- 路由插槽 -->
     <router-view></router-view>
   </div>
@@ -8,9 +8,9 @@
 
 <script>
 export default {
-  name: 'AppIndex',
+  name: 'home2',
   mounted() {
-    console.log('in home')
+    console.log('in home2')
   }
 }
 </script>
